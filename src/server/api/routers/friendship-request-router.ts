@@ -157,8 +157,6 @@ export const friendshipRequestRouter = router({
           .where('friendUserId', '=', currentUserId)
           .execute()
 
-        // Create a new friendship request record for the opposite user
-
         if (existFriendShip) {
           await t
             .updateTable('friendships')
